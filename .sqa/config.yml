@@ -1,0 +1,58 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.7
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cessda/cessda.cmv:
+      branch: 146-improve-SQAaaS-score
+      repo: https://github.com/cessda/cessda.cmv
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/cessda/cessda.cmv git:
+        commands:
+        - /usr/bin/env sh .sqa/script.gloppy-cerise-mouse.sh
+        container: qc.acc_ready-bistre-iguana
+  QC.Doc:
+    repos:
+      github.com/cessda/cessda.cmv find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.leaky-flax-alligator.sh
+        container: qc.doc_sloppy-wheat-shark
+      github.com/cessda/cessda.cmv git:
+        commands:
+        - /usr/bin/env sh .sqa/script.nerdy-fuchsia-chow.sh
+        container: qc.doc_chewy-ochre-malamute
+      github.com/cessda/cessda.cmv markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.breezy-salmon-hyrax.sh
+        container: qc.doc_trippy-malachite-tiger
+  QC.Lic:
+    repos:
+      github.com/cessda/cessda.cmv licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.woolly-sapphire-barracuda.sh
+        container: qc.lic_lumpy-teal-gerbil
+  QC.Met:
+    repos:
+      github.com/cessda/cessda.cmv cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.frumpy-aqua-saola.sh
+        container: qc.met_gloppy-eggplant-echidna
+  QC.Sty:
+    repos:
+      github.com/cessda/cessda.cmv hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.pasty-firebrick-squirt.sh
+        container: qc.sty_squeaky-saffron-mule
+  QC.Ver:
+    repos:
+      github.com/cessda/cessda.cmv get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.jumpy-razzmatazz-burmese.sh
+        container: qc.ver_lovely-cornflower-hornet
+timeout: 5400
