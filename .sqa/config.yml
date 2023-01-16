@@ -15,44 +15,44 @@ sqa_criteria:
     repos:
       github.com/cessda/cessda.cmv git:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-cerise-mouse.sh
-        container: qc.acc_ready-bistre-iguana
+        - /usr/bin/env sh .sqa/script.surly-pink-chin.sh
+        container: qc.acc_pretty-charcoal-caiman
   QC.Doc:
     repos:
       github.com/cessda/cessda.cmv find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-flax-alligator.sh
-        container: qc.doc_sloppy-wheat-shark
+        - /usr/bin/env sh .sqa/script.cozy-blue-koala.sh
+        container: qc.doc_bluesy-flax-insect
       github.com/cessda/cessda.cmv git:
         commands:
-        - /usr/bin/env sh .sqa/script.nerdy-fuchsia-chow.sh
-        container: qc.doc_chewy-ochre-malamute
+        - /usr/bin/env sh .sqa/script.dorky-sapphire-harrier.sh
+        container: qc.doc_trippy-cerise-bison
       github.com/cessda/cessda.cmv markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.breezy-salmon-hyrax.sh
-        container: qc.doc_trippy-malachite-tiger
+        - /usr/bin/env sh .sqa/script.frumpy-charcoal-fish.sh
+        container: qc.doc_stinky-aqua-newfoundland
   QC.Lic:
     repos:
       github.com/cessda/cessda.cmv licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-sapphire-barracuda.sh
-        container: qc.lic_lumpy-teal-gerbil
+        - /usr/bin/env sh .sqa/script.pasty-copper-camel.sh
+        container: qc.lic_scanty-puce-crane
   QC.Met:
     repos:
       github.com/cessda/cessda.cmv cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-aqua-saola.sh
-        container: qc.met_gloppy-eggplant-echidna
+        - /usr/bin/env sh .sqa/script.homey-cardinal-bonobo.sh
+        container: qc.met_trippy-cyan-dragon
   QC.Sty:
     repos:
       github.com/cessda/cessda.cmv hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-firebrick-squirt.sh
-        container: qc.sty_squeaky-saffron-mule
+        - /usr/bin/env sh .sqa/script.skinny-cerise-falcon.sh
+        container: qc.sty_pasty-indigo-wasp
   QC.Ver:
     repos:
       github.com/cessda/cessda.cmv get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.jumpy-razzmatazz-burmese.sh
-        container: qc.ver_lovely-cornflower-hornet
+        - /usr/bin/env sh .sqa/script.clammy-chocolate-rat.sh
+        container: qc.ver_flimsy-charcoal-burmese
 timeout: 5400
